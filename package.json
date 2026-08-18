@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && npm run build:github-pages",
-    "build:github-pages": "node -e \"const fs = require('fs'); const path = require('path'); const src = 'docs/browser'; const dest = 'docs'; fs.readdirSync(src).forEach(f => { const srcPath = path.join(src, f); const destPath = path.join(dest, f); if (fs.lstatSync(srcPath).isDirectory()) { fs.cpSync(srcPath, destPath, {recursive: true}); } else { fs.copyFileSync(srcPath, destPath); } }); console.log('✓ Build files copied to docs/');\"",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:myplacee": "node dist/myplacee/server/server.mjs"
