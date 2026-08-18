@@ -29,9 +29,6 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href "/myplacee/"
 
-      - name: Add 404 fallback
-        run: cp dist/myplacee/index.html dist/myplacee/404.html
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
